@@ -3,4 +3,8 @@ package com.example.demo.controller;
 public StudentController{
 @Autowired
 StudentService studentService;
+@PostMapping("/postdata")
+public Stuentity postdata(@RequestBody Stuentity student){
+    return studentService.saveStudent(student);
+}
 }
