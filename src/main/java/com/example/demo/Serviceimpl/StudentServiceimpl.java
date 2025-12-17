@@ -3,15 +3,19 @@ package com.example.demo.Serviceimpl;
 package com.example.demo.service.stereotype.Service;
 
 import com.example.demo.service.StudentService;
-
+import com.example.demo.repository.StuRepository;
+import com.example.demo.entity;
+import org.springframework.beans.factory.annotation.Autowired;
 @Service
 public class StudentServiceimpl implements StudentService{
 
-private final StuRepository studentrepository;
-public StudentServiceimpl(StuRepository studentrepository){
-    this.studentrepository=studentrepository;
-}
+// private final StuRepository studentrepository;
+// public StudentServiceimpl(StuRepository studentrepository){
+//     this.studentrepository=studentrepository;
+// }
+@Autowired
+StuRepository studentrepository;
 public Stuentity saveStudent(Stuentity student){
-return studentrepository    
+return studentrepository.save(student);    
 }
 }
