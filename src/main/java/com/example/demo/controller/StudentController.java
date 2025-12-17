@@ -1,4 +1,6 @@
 package com.example.demo.controller;
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.PostMapping;
 @RestController
 public StudentController{
 @Autowired
