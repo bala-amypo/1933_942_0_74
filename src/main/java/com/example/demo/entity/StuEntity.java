@@ -6,7 +6,7 @@ import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 
 @Entity
-public class Stuentity{
+public class StuEntity{
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
@@ -48,7 +48,7 @@ public class Stuentity{
         this.cgpa=cgpa;
 
     }
-    public Stuentity(){
+    public StuEntity(){
         
     }
 }
